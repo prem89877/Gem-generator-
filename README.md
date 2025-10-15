@@ -1,2 +1,76 @@
 # Gem-generator-
 Lets create gems 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Generate Gems 💎</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #ffdd57;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.1em;
+    }
+
+    button {
+      background: #ff4b5c;
+      border: none;
+      padding: 15px 30px;
+      color: #fff;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #ff6f91;
+      transform: scale(1.05);
+    }
+
+    .gem-output {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #ffdd57;
+      animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+      from {transform: scale(0.8);}
+      to {transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <h1>💎 Let's Generate Gems 💎</h1>
+  <p>Click the button below to create your magical gem!</p>
+
+  <button onclick="generateGem()">Generate Gem</button>
+
+  <div class="gem-output" id="gemDisplay"></div>
+
+  <script>
+    const gems = ["Ruby ❤️", "Sapphire 💙", "Emerald 💚", "Topaz 💛", "Amethyst 💜", "Diamond 🤍", "Opal 🌈", "Pearl 🤍", "Garnet 🔥", "Aquamarine 🌊"];
+
+    function generateGem() {
+      const randomGem = gems[Math.floor(Math.random() * gems.length)];
+      document.getElementById("gemDisplay").textContent = "You found: " + randomGem + "!";
+    }
+  </script>
+</body>
+</html>
